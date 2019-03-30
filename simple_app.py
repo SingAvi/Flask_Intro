@@ -1,25 +1,26 @@
 from flask import Flask
+from flask import render_template_string
 
 app = Flask(__name__)
 
 @app.route('/')
-def random_function():
-    htmlPage = """
+def hello_world():
+    headline_value = "Graduate Fellowship"
+    htmlpage = """
     <html>
     <h1>
-    Google is my dream company
-    <h1>
-    {expertise_list_ul}
+    Know My {{headline}}!
+    </h1>
     </html>
     """
 
-    expertise = ["Android","Python","UI | UX Designing"]
-    expertise_list = "<ul>"
-    expertise_list += "\n".join(["<li>{expert}</li>".format(expert=expert) for expert in expertise])
-    expertise_list +="<ul>"
-    print(expertise_list)
+    render_page = render_template_string(htmlpage,headline= headline_value)
 
-    return htmlPage.format(expertise_list_ul=expertise_list)
+#   return htmlPage.format(expertise_list_ul=expertise_list)
+
+    return render_page
+
+
 
 
 if __name__ == '__main__':

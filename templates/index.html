@@ -9,10 +9,15 @@
         }
     </style>
 </head>
+
+<body>
 <h1>
     My {{internheader}} !
 </h1>
-<body>
-
+<ul>
+    {% for intern in internships %}
+    <li>{{intern}}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
