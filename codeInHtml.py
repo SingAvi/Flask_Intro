@@ -11,6 +11,7 @@ def hello_world():
 
     rendered_html =render_template("index.html",internheader = intern_head,internships = internship)
 
+
     return rendered_html
 
 
