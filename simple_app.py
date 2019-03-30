@@ -9,7 +9,7 @@ def random_function():
     <h1>
     Google is my dream company
     <h1>
-    {expertise_list}
+    {expertise_list_ul}
     </html>
     """
 
@@ -19,7 +19,7 @@ def random_function():
     expertise_list +="<ul>"
     print(expertise_list)
 
-    return htmlPage.format(expertise_list= expertise_list)
+    return htmlPage.format(expertise_list_ul=expertise_list)
 
 
 if __name__ == '__main__':
